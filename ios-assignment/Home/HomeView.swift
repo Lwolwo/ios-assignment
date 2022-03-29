@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  ios-assignment
 //
 //  Created by Peijun Luo on 2022/3/29.
@@ -20,14 +20,14 @@ struct HomeView: View {
                     Image(systemName: "phone")
                     Text("通讯录")
                 })
-            Text("发现页面")
+            DiscoveryView()
                 .tabItem({
                     Image(systemName: "safari")
                     Text("发现")
                 })
             Text("我页面")
                 .tabItem({
-                    Image(systemName: "safari")
+                    Image(systemName: "person")
                     Text("我")
                 })
         }
