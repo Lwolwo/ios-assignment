@@ -25,14 +25,20 @@ struct CoverView: View {
     }
 }
 
-struct MonmentView<Content: View>: View {
+struct Monment: Identifiable {
+    let id: String
     let nickName: String
     let avatarName: String
     let text: String
-    
-    @ViewBuilder
-    let content: () -> Content?
-    
+    let imageName: String?
+}
+
+struct MonmentView: View {
+    let nickName: String
+    let avatarName: String
+    let text: String
+    let imageName: String?
+
     var body: some View {
         HStack (alignment: .top, spacing: 15) {
             Image(avatarName)
@@ -44,8 +50,10 @@ struct MonmentView<Content: View>: View {
                     .fontWeight(.bold)
                 Text(text)
                     .foregroundColor(.gray)
-                if let content = content {
-                    content()
+                if let imageName = imageName {
+                    Image(imageName).resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: 90)
                 }
             }
         }
@@ -53,17 +61,22 @@ struct MonmentView<Content: View>: View {
 }
 
 struct MonmentsView: View {
+    var monments: [Monment] = [
+        Monment(id: "1", nickName: "星黛露", avatarName: "avatar2", text: "发张自拍", imageName: "image1"),
+        Monment(id: "2", nickName: "杰拉多尼", avatarName: "avatar3", text: "疫情好严重不能一起出来玩", imageName: nil),
+        Monment(id: "3", nickName: "玲娜贝儿", avatarName: "avatar4", text: "川沙妲己邀请大家来我家做客，有空的姐妹滴滴我哦，在线等", imageName: nil),
+        Monment(id: "4", nickName: "星黛露", avatarName: "avatar2", text: "发一条很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的朋友圈", imageName: nil),
+
+    ]
     var body: some View {
         ScrollView (.vertical) {
             VStack (alignment: .leading, spacing: 10) {
                 CoverView()
-                VStack (alignment: .leading, spacing: 20) {
-                    MonmentView(nickName: "12333", avatarName: "avatar2", text: "content content content contentcontent content content contentcontent content content contentcontent content content content") {
-                        Image("image1").resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 90)
+                VStack (alignment: .leading, spacing: 30) {
+                    ForEach(monments, id: \.self.id) { monment in
+                        MonmentView(nickName: monment.nickName, avatarName: monment.avatarName, text: monment.text, imageName: monment.imageName)
+                        
                     }
-                    MonmentView(nickName: "12333", avatarName: "avatar2", text: "content content content contentcontent content content contentcontent content content contentcontent content content content") {}
                 }.padding()
             }
         }
