@@ -26,7 +26,7 @@ struct DiscoveryView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: Text("详情")) {
+                NavigationLink(destination: MonmentsView()) {
                     CellView(name: "朋友圈", imageName: "circle.circle.fill")
                 }
                 CellView(name: "游戏", imageName: "gamecontroller.fill")
