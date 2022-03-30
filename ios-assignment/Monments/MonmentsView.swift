@@ -25,10 +25,13 @@ struct CoverView: View {
     }
 }
 
-struct MonmentView: View {
+struct MonmentView<Content: View>: View {
     let nickName: String
     let avatarName: String
     let text: String
+    
+    @ViewBuilder
+    let content: () -> Content
     
     var body: some View {
         HStack (alignment: .top, spacing: 15) {
@@ -41,6 +44,7 @@ struct MonmentView: View {
                     .fontWeight(.bold)
                 Text(text)
                     .foregroundColor(.gray)
+                content()
             }
         }
     }
@@ -52,8 +56,11 @@ struct MonmentsView: View {
             VStack (alignment: .leading, spacing: 10) {
                 CoverView()
                 VStack (alignment: .leading, spacing: 20) {
-                    MonmentView(nickName: "12333", avatarName: "avatar1", text: "content content content contentcontent content content contentcontent content content contentcontent content content content")
-                    MonmentView(nickName: "12333", avatarName: "avatar1", text: "content")
+                    MonmentView(nickName: "12333", avatarName: "avatar2", text: "content content content contentcontent content content contentcontent content content contentcontent content content content") {
+                        Image("image1").resizable()
+                            .scaledToFit()
+                            .frame(maxHeight: 90)
+                    }
                 }.padding()
             }
         }
