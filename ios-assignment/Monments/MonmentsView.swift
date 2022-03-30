@@ -7,59 +7,6 @@
 
 import SwiftUI
 
-struct CoverView: View {
-    var body: some View {
-        ZStack (alignment: .bottomTrailing) {
-            Image("cover")
-                .resizable()
-                .frame(height: 300)
-            HStack {
-                Text("雪莉玫")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                Image("avatar1")
-                    .resizable()
-                    .frame(width: 70, height: 70)
-            }.offset(x: -15, y: 15)
-        }
-    }
-}
-
-struct Monment: Identifiable {
-    let id: String
-    let nickName: String
-    let avatarName: String
-    let text: String
-    let imageName: String?
-}
-
-struct MonmentView: View {
-    let nickName: String
-    let avatarName: String
-    let text: String
-    let imageName: String?
-
-    var body: some View {
-        HStack (alignment: .top, spacing: 15) {
-            Image(avatarName)
-                .resizable()
-                .frame(width: 50, height: 50)
-            VStack(alignment: .leading, spacing: 5) {
-                Text(nickName)
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
-                Text(text)
-                    .foregroundColor(.gray)
-                if let imageName = imageName {
-                    Image(imageName).resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 90)
-                }
-            }
-        }
-    }
-}
-
 struct MonmentsView: View {
     var monments: [Monment] = [
         Monment(id: "1", nickName: "星黛露", avatarName: "avatar2", text: "发张自拍", imageName: "image1"),

@@ -16,6 +16,8 @@
 		3A27A0A227F31A6400EC8F43 /* ios_assignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27A0A127F31A6400EC8F43 /* ios_assignmentUITestsLaunchTests.swift */; };
 		3A42AEC627F341DE001770BC /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AEC527F341DE001770BC /* DiscoveryView.swift */; };
 		3A42AEC927F349CF001770BC /* MonmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AEC827F349CF001770BC /* MonmentsView.swift */; };
+		3A42AECC27F436EB001770BC /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AECB27F436EB001770BC /* CoverView.swift */; };
+		3A42AECE27F43719001770BC /* MonmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AECD27F43719001770BC /* MonmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		3A27A0A127F31A6400EC8F43 /* ios_assignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_assignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3A42AEC527F341DE001770BC /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		3A42AEC827F349CF001770BC /* MonmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonmentsView.swift; sourceTree = "<group>"; };
+		3A42AECB27F436EB001770BC /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
+		3A42AECD27F43719001770BC /* MonmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				3A42AEC827F349CF001770BC /* MonmentsView.swift */,
+				3A42AECB27F436EB001770BC /* CoverView.swift */,
+				3A42AECD27F43719001770BC /* MonmentView.swift */,
 			);
 			path = Monments;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A27A08727F31A6100EC8F43 /* HomeView.swift in Sources */,
+				3A42AECC27F436EB001770BC /* CoverView.swift in Sources */,
 				3A42AEC927F349CF001770BC /* MonmentsView.swift in Sources */,
 				3A42AEC627F341DE001770BC /* DiscoveryView.swift in Sources */,
 				3A27A08527F31A6100EC8F43 /* ios_assignmentApp.swift in Sources */,
+				3A42AECE27F43719001770BC /* MonmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
