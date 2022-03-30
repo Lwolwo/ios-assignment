@@ -13,6 +13,7 @@ struct Monment: Identifiable {
     let avatarName: String
     let text: String
     let imageName: String?
+    let like: [String]?
 }
 
 struct MonmentView: View {
@@ -20,6 +21,7 @@ struct MonmentView: View {
     let avatarName: String
     let text: String
     let imageName: String?
+    let like: [String]?
 
     var body: some View {
         HStack (alignment: .top, spacing: 15) {
@@ -36,6 +38,16 @@ struct MonmentView: View {
                     Image(imageName).resizable()
                         .scaledToFit()
                         .frame(maxHeight: 90)
+                }
+                if let like = like {
+                    HStack {
+                        Image(systemName: "heart")
+                            .foregroundColor(.white)
+                        ForEach(like, id: \.self) {
+                            Text($0).foregroundColor(.white)
+                        }
+                        Spacer()
+                    }.background(.secondary)
                 }
             }
         }
