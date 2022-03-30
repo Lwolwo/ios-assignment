@@ -25,11 +25,37 @@ struct CoverView: View {
     }
 }
 
+struct MonmentView: View {
+    let nickName: String
+    let avatarName: String
+    let text: String
+    
+    var body: some View {
+        HStack (alignment: .top, spacing: 15) {
+            Image(avatarName)
+                .resizable()
+                .frame(width: 50, height: 50)
+            VStack(alignment: .leading, spacing: 5){
+                Text(nickName)
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                Text(text)
+                    .foregroundColor(.gray)
+            }
+        }
+    }
+}
+
 struct MonmentsView: View {
     var body: some View {
-        VStack (alignment: .leading, spacing: 10) {
-            CoverView()
-            Text("内容")
+        ScrollView (.vertical) {
+            VStack (alignment: .leading, spacing: 10) {
+                CoverView()
+                VStack (alignment: .leading, spacing: 20) {
+                    MonmentView(nickName: "12333", avatarName: "avatar1", text: "content content content contentcontent content content contentcontent content content contentcontent content content content")
+                    MonmentView(nickName: "12333", avatarName: "avatar1", text: "content")
+                }.padding()
+            }
         }
         .navigationTitle("朋友圈")
     }
