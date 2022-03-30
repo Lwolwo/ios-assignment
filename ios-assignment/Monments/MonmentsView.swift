@@ -31,20 +31,22 @@ struct MonmentView<Content: View>: View {
     let text: String
     
     @ViewBuilder
-    let content: () -> Content
+    let content: () -> Content?
     
     var body: some View {
         HStack (alignment: .top, spacing: 15) {
             Image(avatarName)
                 .resizable()
                 .frame(width: 50, height: 50)
-            VStack(alignment: .leading, spacing: 5){
+            VStack(alignment: .leading, spacing: 5) {
                 Text(nickName)
                     .foregroundColor(.black)
                     .fontWeight(.bold)
                 Text(text)
                     .foregroundColor(.gray)
-                content()
+                if let content = content {
+                    content()
+                }
             }
         }
     }
@@ -61,6 +63,7 @@ struct MonmentsView: View {
                             .scaledToFit()
                             .frame(maxHeight: 90)
                     }
+                    MonmentView(nickName: "12333", avatarName: "avatar2", text: "content content content contentcontent content content contentcontent content content contentcontent content content content") {}
                 }.padding()
             }
         }
