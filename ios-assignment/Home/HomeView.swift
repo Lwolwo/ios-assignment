@@ -25,7 +25,7 @@ struct HomeView: View {
                     Image(systemName: "safari")
                     Text("发现")
                 })
-            Text("我页面")
+            MeView()
                 .tabItem({
                     Image(systemName: "person")
                     Text("我")

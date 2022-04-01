@@ -18,6 +18,8 @@
 		3A42AEC927F349CF001770BC /* MonmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AEC827F349CF001770BC /* MonmentsView.swift */; };
 		3A42AECC27F436EB001770BC /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AECB27F436EB001770BC /* CoverView.swift */; };
 		3A42AECE27F43719001770BC /* MonmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AECD27F43719001770BC /* MonmentView.swift */; };
+		3A83729127F706D80011372A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83729027F706D80011372A /* MeView.swift */; };
+		3A83729327F707730011372A /* MeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83729227F707730011372A /* MeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3A42AEC827F349CF001770BC /* MonmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonmentsView.swift; sourceTree = "<group>"; };
 		3A42AECB27F436EB001770BC /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		3A42AECD27F43719001770BC /* MonmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonmentView.swift; sourceTree = "<group>"; };
+		3A83729027F706D80011372A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		3A83729227F707730011372A /* MeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		3A27A08327F31A6100EC8F43 /* ios-assignment */ = {
 			isa = PBXGroup;
 			children = (
+				3A83728F27F706C80011372A /* Me */,
 				3A42AEC727F349BC001770BC /* Monments */,
 				3A42AEC427F341C8001770BC /* Discovery */,
 				3A42AEC327F341BE001770BC /* Home */,
@@ -161,6 +166,15 @@
 				3A42AECD27F43719001770BC /* MonmentView.swift */,
 			);
 			path = Monments;
+			sourceTree = "<group>";
+		};
+		3A83728F27F706C80011372A /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				3A83729027F706D80011372A /* MeView.swift */,
+				3A83729227F707730011372A /* MeDetailView.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A83729127F706D80011372A /* MeView.swift in Sources */,
 				3A27A08727F31A6100EC8F43 /* HomeView.swift in Sources */,
 				3A42AECC27F436EB001770BC /* CoverView.swift in Sources */,
 				3A42AEC927F349CF001770BC /* MonmentsView.swift in Sources */,
 				3A42AEC627F341DE001770BC /* DiscoveryView.swift in Sources */,
+				3A83729327F707730011372A /* MeDetailView.swift in Sources */,
 				3A27A08527F31A6100EC8F43 /* ios_assignmentApp.swift in Sources */,
 				3A42AECE27F43719001770BC /* MonmentView.swift in Sources */,
 			);
