@@ -29,7 +29,10 @@ struct MeView: View {
 }
 
 struct MeView_Previews: PreviewProvider {
+    static var profileModel: ProfileModel = ProfileModel(avatar: "avatar1", nickName: "雪莉玫", coverImage: "cover")
+    
     static var previews: some View {
         MeView()
+            .environmentObject(profileModel)
     }
 }

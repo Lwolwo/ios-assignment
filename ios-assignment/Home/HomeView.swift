@@ -35,9 +35,11 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static var profileModel: ProfileModel = ProfileModel(avatar: "avatar1", nickName: "雪莉玫", coverImage: "cover")
+    
     static var previews: some View {
         Group {
-            HomeView()
+            HomeView().environmentObject(profileModel)
         }
     }
 }

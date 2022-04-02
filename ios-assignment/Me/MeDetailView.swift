@@ -42,5 +42,8 @@ struct MeDetailView: View {
 struct MeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         MeDetailView()
+            .environmentObject(
+                ProfileModel(avatar: "avatar1", nickName: "雪莉玫", coverImage: "cover")
+            )
     }
 }
