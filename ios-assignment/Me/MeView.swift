@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct MeView: View {
+    @EnvironmentObject var profileModel: ProfileModel
+    
     var body: some View {
         NavigationView {
             VStack {
                 List {
                     NavigationLink(destination: MeDetailView()) {
                         HStack {
-                            Image("avatar1").resizable().scaledToFit().frame(width: 60, height: 60, alignment: .leading)
-                            Text("雪莉玫")
+                            Image(profileModel.avatar).resizable().scaledToFit().frame(width: 60, height: 60, alignment: .leading)
+                            Text(profileModel.nickName)
                         }
                     }
                 }.listStyle(.plain)

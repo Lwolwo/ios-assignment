@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct CoverView: View {
+    @EnvironmentObject var profileModel: ProfileModel
+    
     var body: some View {
         ZStack (alignment: .bottomTrailing) {
-            Image("cover")
+            Image(profileModel.coverImage)
                 .resizable()
                 .frame(height: 300)
             HStack {
-                Text("雪莉玫")
+                Text(profileModel.nickName)
                     .foregroundColor(.white)
                     .fontWeight(.bold)
-                Image("avatar1")
+                Image(profileModel.avatar)
                     .resizable()
                     .frame(width: 70, height: 70)
             }.offset(x: -15, y: 15)

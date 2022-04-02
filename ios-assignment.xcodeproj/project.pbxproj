@@ -20,6 +20,7 @@
 		3A42AECE27F43719001770BC /* MonmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42AECD27F43719001770BC /* MonmentView.swift */; };
 		3A83729127F706D80011372A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83729027F706D80011372A /* MeView.swift */; };
 		3A83729327F707730011372A /* MeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83729227F707730011372A /* MeDetailView.swift */; };
+		3A83729527F717D60011372A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83729427F717D60011372A /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3A42AECD27F43719001770BC /* MonmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonmentView.swift; sourceTree = "<group>"; };
 		3A83729027F706D80011372A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		3A83729227F707730011372A /* MeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDetailView.swift; sourceTree = "<group>"; };
+		3A83729427F717D60011372A /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				3A27A08427F31A6100EC8F43 /* ios_assignmentApp.swift */,
 				3A27A08827F31A6300EC8F43 /* Assets.xcassets */,
 				3A27A08A27F31A6300EC8F43 /* Preview Content */,
+				3A83729427F717D60011372A /* ProfileModel.swift */,
 			);
 			path = "ios-assignment";
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A83729527F717D60011372A /* ProfileModel.swift in Sources */,
 				3A83729127F706D80011372A /* MeView.swift in Sources */,
 				3A27A08727F31A6100EC8F43 /* HomeView.swift in Sources */,
 				3A42AECC27F436EB001770BC /* CoverView.swift in Sources */,
