@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-struct Monment: Identifiable {
-    let id: String
-    let nickName: String
-    let avatarName: String
-    let text: String
-    let imageName: String?
-    let like: [String]?
-}
-
 struct MonmentView: View {
     let nickName: String
     let avatarName: String
@@ -39,7 +30,7 @@ struct MonmentView: View {
                         .scaledToFit()
                         .frame(maxHeight: 90)
                 }
-                if let like = like {
+                if let like = like, !like.isEmpty {
                     HStack {
                         Image(systemName: "heart")
                             .foregroundColor(.white)

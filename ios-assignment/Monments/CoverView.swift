@@ -26,3 +26,13 @@ struct CoverView: View {
         }
     }
 }
+
+
+struct CoverView_Previews: PreviewProvider {
+    static var previews: some View {
+        CoverView()
+            .environmentObject(
+                ProfileModel(avatar: "avatar1", nickName: "雪莉玫", coverImage: "cover")
+            )
+    }
+}
